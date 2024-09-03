@@ -1,10 +1,7 @@
 package com.ashify.studennt_management_systme.Entities;
 
 import jakarta.annotation.Nullable;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,13 +12,24 @@ import lombok.Setter;
 public class Student {
 
     @Id
+    @SequenceGenerator(
+            name = "stud_seq",
+            sequenceName = "student_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            generator ="stud_seq",
+            strategy = GenerationType.IDENTITY
+
+    )
     private int StudId;
+
     @Column( nullable = false)
     private  String StudName;
 
     @Column( nullable = false)
     private String StudClass;
-    
+
     @Column( nullable = false)
     private int StudAge;
 
