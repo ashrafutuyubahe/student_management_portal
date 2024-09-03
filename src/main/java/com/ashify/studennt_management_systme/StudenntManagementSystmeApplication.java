@@ -23,12 +23,12 @@ public class StudenntManagementSystmeApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        var studentDataToAdd = new Student();
-        studentDataToAdd.setStudClass("Y1C");
-        studentDataToAdd.setStudAge(20);
-        studentDataToAdd.setStudName("Hackim");
-        studentDataToAdd.setStudId(1);
-        studController.addStudent(studentDataToAdd);
+//        var studentDataToAdd = new Student();
+//        studentDataToAdd.setStudClass("Y1C");
+//        studentDataToAdd.setStudAge(20);
+//        studentDataToAdd.setStudName("Hackim");
+//        studentDataToAdd.setStudId(1);
+//        studController.addStudent(studentDataToAdd);
 
          var students= studController.getAllStudent();
         System.out.println(students);

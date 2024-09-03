@@ -1,5 +1,7 @@
 package com.ashify.studennt_management_systme.Entities;
 
+import jakarta.annotation.Nullable;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -14,8 +16,13 @@ public class Student {
 
     @Id
     private int StudId;
+    @Column( nullable = false)
     private  String StudName;
+
+    @Column( nullable = false)
     private String StudClass;
+    
+    @Column( nullable = false)
     private int StudAge;
 
     public Student(int studId, String studName, String studClass, int studAge) {

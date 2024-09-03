@@ -30,6 +30,7 @@ public class StudController {
 
     @PostMapping("/addStudentInDatabase")
     public String addStudentEndpoint(@RequestBody Student student) {
+        System.out.println(student);
         if (student == null) {
             return "The student object is null";
         }
